@@ -40,6 +40,8 @@ List comprehension:
 `(concat *list1* ... *listN*)` - returns list with all elements from all lists 1-N
 `(lazy-cat *list1* ... *listN*)` - returns list with all elements from all lists 1-N, but joining it self occurs only when needed
 `(str item1 item2 ... itemN)` - stringifies all items and returns concatenated items
+`(reverse *list*)`
+`(mapcat function *list1* ... *listN*)` - applies function to each list and then concatenates all of them
 
 ## Conditional and flow-control statements
 `(if bool-expression body-if-true body-if-false)`
@@ -64,9 +66,12 @@ For-like loops:
 
 ## Testing
 
-Firstly `(use 'clojure.test)`
-Then write some test cases:
+Firstly
+```clojure
+  (use 'clojure.test)
 ```
+Then write some test cases:
+```clojure
    (deftest is-1-equal-to-1
      (is (= 1 1))
      )
@@ -76,6 +81,6 @@ Then write some test cases:
      )
 ```
 And finally run all tests:
-```
-(run-all-tests)
+```clojure
+   (run-all-tests)
 ```
