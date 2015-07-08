@@ -31,16 +31,27 @@ List comprehension:
 ```
 ## Operations on data structures
 `(conj collection elements)` - returns collection with elements added to 'optimal' end of collection. I.e. on list's head, and vector's tail.
+
 `(cons element list)` - return *seq* with elements added to the beginning of collection
+
 `(intersection set1 set1)`
+
 `(union set1 set1)`
+
 `(first *list*)` - returns first element of list
+
 `(last *list*)` - returns last element of list
+
 `(rest *list*)` - returns list without first element
+
 `(concat *list1* ... *listN*)` - returns list with all elements from all lists 1-N
+
 `(lazy-cat *list1* ... *listN*)` - returns list with all elements from all lists 1-N, but joining it self occurs only when needed
+
 `(str item1 item2 ... itemN)` - stringifies all items and returns concatenated items
+
 `(reverse *list*)`
+
 `(mapcat function *list1* ... *listN*)` - applies function to each list and then concatenates all of them
 
 ## Conditional and flow-control statements
